@@ -11,7 +11,7 @@ Ce projet est le n°2 du parcours [**Développeur d'application - JavaScript Rea
 
 
 ### Compétences acquises
--Implémenter une interface responsive
+-Implémenter une interface responsive   
 -Intégrer du contenu conformément à une maquette
 
 
