@@ -67,7 +67,7 @@ a{
     color: #000;
     text-decoration: none;
 }
-.nav .nav__link a:hover{
+.nav .nav__link a:hover,.nav .nav__current a {
     border-top: 3px solid var(--primary-color);
     padding-top: 23px ;
     color: var(--primary-color);
@@ -184,6 +184,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-left: -5px;
 }
 .section .section__list{
     display: flex;
@@ -206,8 +207,11 @@ a{
     background-color: #fff;
 }
 .card:hover{
-    transform: translateY(-10px) scale(1.005) translateZ(0);    
-    transition: 0.4s;
+    transform: translateY(-10px) scale(1.005);    
+    transition: 0.4s ease-in-out;
+}
+.card:hover h3{
+    text-decoration: underline #a6a6a6;
 }
 .card img{
     width: 100%;
@@ -333,13 +337,20 @@ a{
 .footer a{
     display: block;
 }
+.footer a:hover{
+    text-decoration: underline #a6a6a6;
+}
 
 /* ======================================================================= */
-/* media queries breakpoint 768PX TABLET and  992PX Laptop */
-@media screen and (min-width: 769px) and (max-width: 992px) {
+/* media queries breakpoint 992PX tablet */
+@media screen and (max-width: 992px) {
     /* section tablet laptop */
     .section{
         padding: 8px;
+    }
+    .section .section__header{
+        justify-content: space-evenly;
+        margin-left: 0;
     }
     .section--hebergements .section__list{
         justify-content: space-evenly;
@@ -374,7 +385,7 @@ a{
     .nav .nav__link{
         padding-left: unset;
     }
-    .nav .nav__link a:hover{
+    .nav .nav__link a:hover, .nav .nav__current a{
         padding-top: unset;
         padding-bottom:7px ;
         border-top: none;
@@ -414,6 +425,9 @@ a{
     }
     /* ======================================================================= */
     /* section smartphones */
+    .section__header{
+        margin-left: 20px;
+    }
     .container--hebergements-populaires{
         flex-direction: column-reverse;
         justify-content: unset;
