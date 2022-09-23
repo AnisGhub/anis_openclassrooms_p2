@@ -217,14 +217,14 @@ a{
     width: 100%;
     object-fit: cover;
 }
-/* .card__content{
-    padding: 5px;
-} */
 .card .stars{
     margin: 7px;
     font-size: 10px;
     color: var(--primary-color);
 }
+.card .stars i:last-child{
+    color: #9b9b9b;
+} 
 
 /* Hebergements */
 .section--hebergements{
@@ -352,6 +352,9 @@ a{
         justify-content: space-evenly;
         margin-left: 0;
     }
+    .section .section__footer{
+        text-align: center;
+    }
     .section--hebergements .section__list{
         justify-content: space-evenly;
     }
@@ -425,8 +428,13 @@ a{
     }
     /* ======================================================================= */
     /* section smartphones */
-    .section__header{
-        margin-left: 20px;
+    .section .section__header{
+        margin-left: 25px;
+        justify-content: space-between;
+    }
+    .section .section__footer{
+        text-align: unset;
+        margin-left: 25px;
     }
     .container--hebergements-populaires{
         flex-direction: column-reverse;
